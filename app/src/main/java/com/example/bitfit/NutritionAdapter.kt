@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NutritionAdapter (private val context: Context, private val nutrition:List<Nutrition>)  : RecyclerView.Adapter<NutritionAdapter.NutritionViewHolder>(){
+class NutritionAdapter (private val context: Context, private val nutrition:MutableList<Nutrition>)  : RecyclerView.Adapter<NutritionAdapter.NutritionViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NutritionAdapter.NutritionViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.activity_detail, parent, false)
         return NutritionViewHolder(view)
