@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         nutritionRv = findViewById(R.id.nutrition_logs)
         nutritionAdapter = NutritionAdapter(this, nutrition)
         nutritionRv.adapter = nutritionAdapter
+        nutritionRv.layoutManager = LinearLayoutManager(this).also{
+            val dividerItemDecoration = DividerItemDecoration(this, it.orientation)
+            nutritionRv.addItemDecoration(dividerItemDecoration)
+        }
 
 
         lifecycleScope.launch {
