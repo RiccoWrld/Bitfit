@@ -35,6 +35,7 @@ https://youtu.be/ckfhA27uPo0
 
 ## Notes
 No GIF for project
+Chosen metric: FOOD_NAME and FOOD_CALORIE
 
 Describe any challenges encountered while building the app.
 - Gettin recyclerview layout correct
